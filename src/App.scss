@@ -1,3 +1,7 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 *{
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
@@ -6,8 +10,12 @@
      padding: 0;
 }
 
+$breakpoint-tablet: 576px;
+$accent-color: #df2518;
+
+
 body{
-    background: rgb(1, 1, 37);
+    background-color: rgb(22, 17, 17);
 }
 
 nav{
@@ -21,15 +29,23 @@ nav{
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
+        
     }
    .logo{
        color: rgb(237, 240, 250);
        font-size: 2.5rem;
+       font-weight: medium;
+       display: flex;
+       align-items: center;
        
        span:nth-child(odd){
-           color: gray;
+           color: $accent-color;
+           font-size: 2.1rem;
+          
        }
-
+      @media only screen and (min-width: $breakpoint-tablet) {
+          font-size: 3rem;
+      }
    }
 
     .nav-links{
@@ -41,7 +57,7 @@ nav{
         flex-direction: column;
         align-items: center;
         font-size: 1.5rem;
-       
+ 
       
         transform: translateY(100%);
          box-sizing: border-box;
@@ -49,9 +65,6 @@ nav{
          overflow: hidden;
          max-height: 0;
          transition: max-height 200ms linear;
-        .active{
-            color: whitesmoke;
-        }
         
         li{
             
@@ -63,11 +76,31 @@ nav{
                 padding: 5px;
                 text-transform: capitalize;
             }
+            .active{
+                color: whitesmoke;
+            }
+            
         }
+     
+     @media (min-width: $breakpoint-tablet){
+         position: relative;
+         max-height: fit-content;
+         transform: translateY(0);
+         z-index: 1;
+         flex-direction: row;
+         width: fit-content;
+         font-size: 1.4rem;
+         li{
+             margin: 0 10px;
+         }
+     }
+
+
     }
     .active-nav{
         max-height: 250px;
      }
+
     .menu-btn{
         width: 40px;
         height: 35px;
@@ -79,12 +112,19 @@ nav{
          padding: 5px;
          box-sizing: border-box;
          border-radius: 5px;
+         cursor: pointer;
         div{
             width: 90%;
             height: 2px;
             background: rgb(231, 231, 231);
             border-radius: 2px;
         }
+        @media  (min-width: $breakpoint-tablet){
+            display: none;
+        }
     }
 
+   
+
 }
+

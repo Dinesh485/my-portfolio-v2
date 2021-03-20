@@ -7,7 +7,7 @@ const Nav = () => {
    let ele =   document.querySelector('.nav-links')
     
     ele.classList.toggle("active-nav")
-    console.log(ele.classList)
+   
    }
 
 
@@ -18,10 +18,10 @@ const Nav = () => {
             <span>{'<'}</span><span>DG</span><span>{'/>'}</span>
           </div>
         <ul className="nav-links">
-            <li><NavLink to="#start" className = "active"  >start</NavLink></li>
-            <li><NavLink to="#start" >work</NavLink></li>
-            <li><NavLink to="#start" >about</NavLink></li>
-            <li><NavLink to="#start" >contact</NavLink></li>
+           <li><NavLink to = '#'>start</NavLink></li>
+           <li><NavLink to = '#'>work</NavLink></li>
+           <li><NavLink to = '#'>about</NavLink></li>
+           <li><NavLink to = '#'>contact</NavLink></li>
         </ul>
         <div className="menu-btn" onClick  = {handleClick}>
             <div></div>

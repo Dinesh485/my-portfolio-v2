@@ -1,10 +1,15 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss'
 import Nav from './components/Nav'
+
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+     <div className="App">
         <Nav />
     </div>
+    </BrowserRouter>
+   
   );
 }
 

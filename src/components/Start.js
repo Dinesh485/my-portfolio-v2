@@ -2,6 +2,7 @@ const Start = () => {
     return ( 
         <section className = "start" id = 'start'>
             <div className="wrapper">
+                <p>Start {"/>"}</p>
                 <h1>Hi, my name is <span>Dinesh</span></h1>
                 <h2>i <span>design</span> and <span>develop</span> websites</h2>
                 <span>let me show you...</span>

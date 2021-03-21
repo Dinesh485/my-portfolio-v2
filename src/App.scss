@@ -10,9 +10,13 @@
      padding: 0;
 }
 
-$breakpoint-tablet: 576px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
 $accent-color: #df2518;
-$bg-color: rgb(22, 17, 17);
+$bg-color: rgb(16, 13, 27);
 
 
 body{
@@ -40,7 +44,8 @@ body{
 
 nav{
     
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 100;
     .wrapper{
         width: 90%;
@@ -50,6 +55,9 @@ nav{
         align-items: center;
         justify-content: space-between;
         padding: 5px 0;
+        @media(min-width: $xl){
+            padding: 10px 0;
+        }
         
     }
    .logo{
@@ -64,8 +72,14 @@ nav{
            font-size: 2.1rem;
           
        }
-      @media only screen and (min-width: $breakpoint-tablet) {
+      @media  (min-width: $sm) {
           font-size: 3rem;
+      }
+      @media (min-width: $xl){
+          font-size: 4rem;
+          span:nth-child(odd){
+           font-size: 3.5rem;
+          }
       }
    }
 
@@ -103,7 +117,7 @@ nav{
             
         }
      
-     @media (min-width: $breakpoint-tablet){
+     @media (min-width: $sm){
          position: relative;
          max-height: fit-content;
          transform: translateY(0);
@@ -115,7 +129,8 @@ nav{
              margin: 0 10px;
          }
      }
-
+    
+     
 
     }
     .active-nav{
@@ -140,11 +155,11 @@ nav{
             background: rgb(231, 231, 231);
             border-radius: 2px;
         }
-        @media  (min-width: $breakpoint-tablet){
+        @media  (min-width: $sm){
             display: none;
         }
     }
-
+  
    
 
 }
@@ -152,15 +167,25 @@ nav{
 
 .start{
    position: relative;
+   
     .wrapper{
         width: 70%;
         margin: 0 auto;
+        
+        p{
+            color: rgba(255, 255, 255, 0.418);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            font-weight: lighter;
+           
+        }
         h1{
             color: white;
             font-size: 2rem;
             span{
                 color: $accent-color;
             }
+           
         }
         h2{
             color: white;
@@ -185,10 +210,36 @@ nav{
             display: block;
             width: fit-content;
         }
+        @media(min-width: $sm){
+             h1{
+                 font-size: 2.5rem;
+             }
+             h2{
+                 font-size: 2.2rem;
+                 margin-top: 10px;
+             }
+             >span{
+                 margin-top: 40px;
+             }
+
+        }
+        @media(min-width: $xl){
+            width: 60%;
+            h1{
+                font-size: 3rem;
+            }
+            h2{
+                font-size: 2.8rem;
+                
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
     }
     svg{
         position: absolute;
-        bottom: 10px;
+        bottom: 30px;
         margin: 0 auto;
         fill: whitesmoke;
     }

@@ -3,11 +3,12 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.scss'
 import Nav from './components/Nav'
 import Start from './components/Start';
+import Work from './components/Work';
 import loading from './images/loading.svg'
 
 function App() {
 
-   let [loading, setLaoding] = useState(true)
+   let [isloading, setLaoding] = useState(true)
    useEffect(() =>{
       setLaoding(false)
    },[])
@@ -19,9 +20,10 @@ function App() {
        <Nav />
         <div className="tab-container">
         <Start />
+        <Work />
         </div>
       
-       {loading &&  <span className="loading">
+       {isloading &&  <span className="loading">
              <img src={loading} alt=""/>
         </span>}
     </div>

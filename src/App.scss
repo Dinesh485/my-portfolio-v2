@@ -42,7 +42,7 @@ $bg-color: rgb(16, 13, 27);
   position: relative;
   height: 100%;
   width: 100%;
-  overflow:hidden;
+  
   > section {
     height: 100%;
   }
@@ -53,6 +53,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 100;
+  background: $bg-color;
   .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -103,7 +104,7 @@ nav {
     overflow: hidden;
     max-height: 0;
     transition: max-height 200ms linear;
-   
+    background: $bg-color;
     li {
       width: fit-content;
       margin: 5px 0;
@@ -242,3 +243,81 @@ nav {
   }
 }
 
+.work{
+  position: absolute;
+  background: $bg-color;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+  padding: 100px 0;
+  
+
+  
+  .wrapper{
+    width: 80%;
+   display: grid;
+   grid-gap: 20px;
+   
+   color: whitesmoke;
+    margin: 0 auto;
+    align-items: center;  
+    justify-items: center;
+    
+     .project{
+       color: whitesmoke;
+       position: relative;
+      max-width: 300px;
+       img{
+         width: 100%;
+        
+         display:block;
+         z-index: 1;
+       }
+      .name{
+        position: absolute;
+        left: -20px;
+        bottom: 30px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        z-index: 2;
+        span:first-child{
+          border-bottom: 3px solid whitesmoke;
+          padding: 5px 0;
+          
+          display: block;
+          width: fit-content;
+          margin-bottom: 10px ;
+        }
+        .index{
+          font-size: 1rem;
+          font-weight: lighter;
+          color: rgba(128, 128, 128, 0.767);
+          display: block;
+          
+        }
+      }
+     
+
+     }
+     .project:after{
+       content: '';
+       height: 100%;
+       width: 100%;
+       background: linear-gradient(to top right, rgb(0, 0, 0) , rgba(128, 128, 128, 0));
+       position: absolute;
+       top: 0;
+       left: 0;
+       
+     }
+     .project:nth-child(even){
+       justify-self: end;
+     }
+     .project:nth-child(odd){
+      justify-self: start;
+    }
+  }
+}

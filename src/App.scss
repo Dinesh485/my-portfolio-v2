@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Amita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Amita&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-*{
-    font-family: 'Roboto Condensed', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0;
-     padding: 0;
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 $sm: 640px;
@@ -18,229 +19,226 @@ $xxl: 1536px;
 $accent-color: #df2518;
 $bg-color: rgb(16, 13, 27);
 
-
-body{
-    background-color: $bg-color ;
+.App{
+    height: calc(var(--vh, 1vh) * 100);
+    position: relative;
 }
+.loading{
+    width: 100%;
+    height: 100%;
+    background: $bg-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    img{
+        width: 100px;
+    }
+}
+.tab-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+  > section {
+    height: 100%;
+  }
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
 
-.outer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    @media (min-width: $xl) {
+      padding: 10px 0;
+    }
+  }
+  .logo {
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: medium;
+    display: flex;
+    align-items: center;
 
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
+    span:nth-child(odd) {
+      color: $accent-color;
+      font-size: 2.1rem;
+    }
+    @media (min-width: $sm) {
+      font-size: 3rem;
+    }
+    @media (min-width: $xl) {
+      font-size: 4rem;
+      span:nth-child(odd) {
+        font-size: 3.5rem;
+      }
+    }
+  }
 
- 
-  .tab-container{
-      flex-basis: 100%;
+  .nav-links {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+
+    transform: translateY(100%);
+    box-sizing: border-box;
+
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 200ms linear;
+   
+    li {
+      width: fit-content;
+      margin: 5px 0;
+      a {
+        color: rgb(151, 151, 151);
+        font-weight: bold;
+        padding: 5px;
+        text-transform: capitalize;
+      }
+      .active {
+        color: whitesmoke;
+      }
+    }
+
+    @media (min-width: $sm) {
       position: relative;
-       >section{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-       }
+      max-height: fit-content;
+      transform: translateY(0);
+      z-index: 1;
+      flex-direction: row;
+      width: fit-content;
+      font-size: 1.4rem;
+      li {
+        margin: 0 10px;
+      }
+    }
+  }
+  .active-nav {
+    max-height: 250px;
+  }
+
+  .menu-btn {
+    width: 40px;
+    height: 35px;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    div {
+      width: 90%;
+      height: 2px;
+      background: rgb(231, 231, 231);
+      border-radius: 2px;
+    }
+    @media (min-width: $sm) {
+      display: none;
+    }
   }
 }
 
-nav{
+.start {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 70%;
+    margin: 0 auto;
+
     
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    .wrapper{
-        width: 90%;
-        margin: 0 auto;
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 5px 0;
-        @media(min-width: $xl){
-            padding: 10px 0;
-        }
-        
+    p {
+      color: rgba(255, 255, 255, 0.418);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      font-weight: lighter;
     }
-   .logo{
-       color: rgb(237, 240, 250);
-       font-size: 2.5rem;
-       font-weight: medium;
-       display: flex;
-       align-items: center;
-       
-       span:nth-child(odd){
-           color: $accent-color;
-           font-size: 2.1rem;
-          
-       }
-      @media  (min-width: $sm) {
-          font-size: 3rem;
+    h1 {
+      color: whitesmoke;
+      font-size: 2rem;
+      position: relative;
+      width: fit-content;
+      overflow: hidden;
+      span {
+        color: $accent-color;
       }
-      @media (min-width: $xl){
-          font-size: 4rem;
-          span:nth-child(odd){
-           font-size: 3.5rem;
-          }
+    }
+    h2 {
+      color: whitesmoke;
+
+      font-size: 1.8rem;
+      margin-top: 20px;
+      line-height: 1.3;
+
+      span {
+        font-family: "Amita", cursive;
+        font-weight: lighter;
       }
-   }
-
-    .nav-links{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        left: 0;
-         display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.5rem;
- 
-      
-        transform: translateY(100%);
-         box-sizing: border-box;
-        
-         overflow: hidden;
-         max-height: 0;
-         transition: max-height 200ms linear;
-          background-color: $bg-color;
-        li{
-            
-            width: fit-content;
-            margin: 5px 0;
-            a{
-                color: rgb(151, 151, 151);
-                font-weight: bold;
-                padding: 5px;
-                text-transform: capitalize;
-            }
-            .active{
-                color: whitesmoke;
-            }
-            
-        }
-     
-     @media (min-width: $sm){
-         position: relative;
-         max-height: fit-content;
-         transform: translateY(0);
-         z-index: 1;
-         flex-direction: row;
-         width: fit-content;
-         font-size: 1.4rem;
-         li{
-             margin: 0 10px;
-         }
-     }
-    
-     
-
+      span:last-child {
+        font-family: "Roboto Mono", monospace;
+      }
     }
-    .active-nav{
-        max-height: 250px;
-     }
-
-    .menu-btn{
-        width: 40px;
-        height: 35px;
-        border: 2px solid gray;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-         align-items: center;
-         padding: 5px;
-         box-sizing: border-box;
-         border-radius: 5px;
-         cursor: pointer;
-        div{
-            width: 90%;
-            height: 2px;
-            background: rgb(231, 231, 231);
-            border-radius: 2px;
-        }
-        @media  (min-width: $sm){
-            display: none;
-        }
+    > span {
+      color: rgba(255, 255, 255, 0.418);
+      font-weight: normal;
+      font-size: 1.6rem;
+      margin-top: 10px;
+      display: block;
+      width: fit-content;
     }
-  
-   
-
+    @media (min-width: $sm) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2.2rem;
+        margin-top: 10px;
+      }
+      > span {
+        margin-top: 40px;
+      }
+    }
+    @media (min-width: $xl) {
+      width: 60%;
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2.8rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    bottom: 30px;
+    margin: 0 auto;
+    fill: whitesmoke;
+  }
 }
 
-
-.start{
-   position: relative;
-   
-    .wrapper{
-        width: 70%;
-        margin: 0 auto;
-        
-        p{
-            color: rgba(255, 255, 255, 0.418);
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-            font-weight: lighter;
-           
-        }
-        h1{
-            color: white;
-            font-size: 2rem;
-            span{
-                color: $accent-color;
-            }
-           
-        }
-        h2{
-            color: white;
-
-            font-size: 1.8rem;
-            margin-top: 20px;
-            line-height: 1.3;
-            
-            span{
-                font-family: 'Amita', cursive;
-                font-weight: lighter;
-            }
-            span:last-child{
-                font-family: "Roboto Mono" ,monospace;
-            }
-        }
-        >span{
-            color: rgba(255, 255, 255, 0.418);
-            font-weight: normal;
-            font-size: 1.6rem;
-            margin-top: 10px;
-            display: block;
-            width: fit-content;
-        }
-        @media(min-width: $sm){
-             h1{
-                 font-size: 2.5rem;
-             }
-             h2{
-                 font-size: 2.2rem;
-                 margin-top: 10px;
-             }
-             >span{
-                 margin-top: 40px;
-             }
-
-        }
-        @media(min-width: $xl){
-            width: 60%;
-            h1{
-                font-size: 3rem;
-            }
-            h2{
-                font-size: 2.8rem;
-                
-            }
-            p{
-                font-size: 1.2rem;
-            }
-        }
-    }
-    svg{
-        position: absolute;
-        bottom: 30px;
-        margin: 0 auto;
-        fill: whitesmoke;
-    }
-}

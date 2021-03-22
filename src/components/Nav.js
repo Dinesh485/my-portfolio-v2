@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom'
 
-const Nav = () => {
+const Nav = ({position}) => {
   
    const handleClick = () =>{
      
@@ -12,7 +12,7 @@ const Nav = () => {
 
 
     return ( 
-        <nav >
+        <nav className = {position} >
       <div className="wrapper">
           <div className="logo">
             <span>{'<'}</span><span>DG</span><span>{'/>'}</span>

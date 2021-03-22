@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import {gsap } from 'gsap'
 import bgImg from '../images/58064.png'
+import Nav from './Nav'
 
 const Start = () => {
     
@@ -18,6 +19,7 @@ const Start = () => {
 
     return ( 
         <section className = "start" id = 'start'  style = {{background: `url(${bgImg})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+           <Nav />
             <div className="wrapper">
                 <p className = "anim1 ">Start {"/>"}</p>
                 <h1 className = "anim1">Hi, my name is <span>Dinesh</span></h1>

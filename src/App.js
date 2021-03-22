@@ -5,10 +5,15 @@ import Nav from './components/Nav'
 import Start from './components/Start';
 import Work from './components/Work';
 import loading from './images/loading.svg'
+import {gsap} from 'gsap';
+
 
 function App() {
 
    let [isloading, setLaoding] = useState(true)
+   
+   
+
    useEffect(() =>{
       setLaoding(false)
    },[])
@@ -17,11 +22,9 @@ function App() {
     <BrowserRouter>
      <div className="App">
        
-       <Nav />
-        <div className="tab-container">
-        <Start />
+         <Nav position = "outer-nav"/>
+        <Start /> 
         <Work />
-        </div>
       
        {isloading &&  <span className="loading">
              <img src={loading} alt=""/>

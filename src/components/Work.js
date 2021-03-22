@@ -33,13 +33,13 @@ const Work = () => {
                     projects.map((item, index) =>{
                         return (
                            
-                                <Link to = {item.url} className = "project">
+                                <Link to = {item.url} className = "project" key= {index}>
                                <img src={item.image} alt=""/>
                                <div className="name">
                                    <span>
                                    {item.name}
                                    </span>
-                                   <span class ="index">{index +1}</span>
+                                   <span className ="index">{index +1}</span>
                                </div>
                             </Link>
                            

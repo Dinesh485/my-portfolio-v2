@@ -1,0 +1,122 @@
+
+nav {
+ 
+    width: 100%;
+    z-index: 100;
+    background: none;
+    height: auto;
+    
+    .wrapper {
+      width: 90%;
+      margin: 0 auto;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 0;
+      @media (min-width: $xl) {
+        padding: 10px 0;
+      }
+    }
+    .logo {
+      color: whitesmoke;
+      font-size: 2.5rem;
+      font-weight: medium;
+      display: flex;
+      align-items: center;
+  
+      span:nth-child(odd) {
+        color: $accent-color;
+        font-size: 2.1rem;
+      }
+      @media (min-width: $sm) {
+        font-size: 3rem;
+      }
+      @media (min-width: $xl) {
+        font-size: 4rem;
+        span:nth-child(odd) {
+          font-size: 3.5rem;
+        }
+      }
+    }
+  
+    .nav-links {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+  
+      transform: translateY(100%);
+      box-sizing: border-box;
+  
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 200ms linear;
+      background: $bg-color;
+      li {
+        width: fit-content;
+        margin: 5px 0;
+        a {
+          color: rgb(151, 151, 151);
+          font-weight: bold;
+          padding: 5px;
+          text-transform: capitalize;
+        }
+        .active {
+          color: whitesmoke;
+        }
+      }
+  
+      @media (min-width: $sm) {
+        position: relative;
+        max-height: fit-content;
+        transform: translateY(0);
+        z-index: 1;
+        flex-direction: row;
+        width: fit-content;
+        font-size: 1.4rem;
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
+    .active-nav {
+      max-height: 250px;
+    }
+  
+    .menu-btn {
+      width: 40px;
+      height: 35px;
+      border: 2px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      cursor: pointer;
+      div {
+        width: 90%;
+        height: 2px;
+        background: rgb(231, 231, 231);
+        border-radius: 2px;
+      }
+      @media (min-width: $sm) {
+        display: none;
+      }
+    }
+  }
+  
+  .outer-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+  }
+  

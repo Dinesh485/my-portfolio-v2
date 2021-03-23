@@ -37,12 +37,17 @@ function App() {
 
   //scroll detection
   let nav = document.querySelector('nav')
+  
     let lastScrolltop = 0;
     window.addEventListener("scroll", (e) => {
       let st = window.pageYOffset;
       if (st > lastScrolltop) {
         
         nav.classList.add('nav-hide')
+        
+
+       
+
       } else {
         
         nav.classList.remove('nav-hide')

@@ -24,6 +24,11 @@ $bg-color: rgb(16, 13, 27);
 .App{
    
     position: relative;
+    
+
+}
+html{
+    scroll-behavior: smooth;
 }
 .loading{
     width: 100%;

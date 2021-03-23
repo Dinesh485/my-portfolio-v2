@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 const Nav = ({position}) => {
   
@@ -14,9 +14,9 @@ const Nav = ({position}) => {
     return ( 
         <nav className = {position} >
       <div className="wrapper">
-          <div className="logo">
+          <Link className="logo">
             <span>{'<'}</span><span>DG</span><span>{'/>'}</span>
-          </div>
+          </Link>
         <ul className="nav-links">
            <li><NavLink to = '#'>start</NavLink></li>
            <li><NavLink to = '#'>work</NavLink></li>

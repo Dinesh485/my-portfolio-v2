@@ -1,11 +1,14 @@
 
 nav {
- 
+     position: fixed;
+     top: 0;
+     left: 0;
+
     width: 100%;
     z-index: 100;
     background: none;
     height: auto;
-    
+    transition: transform 400ms linear;
     .wrapper {
       width: 90%;
       margin: 0 auto;
@@ -14,9 +17,7 @@ nav {
       align-items: center;
       justify-content: space-between;
       padding: 5px 0;
-      @media (min-width: $xl) {
-        padding: 10px 0;
-      }
+     
     }
     .logo {
       color: whitesmoke;
@@ -83,6 +84,9 @@ nav {
           margin: 0 10px;
         }
       }
+      @media(min-width: $md){
+        background: none;
+      }
     }
     .active-nav {
       max-height: 250px;
@@ -110,13 +114,13 @@ nav {
         display: none;
       }
     }
+
+    @media(min-width: $md){
+      background: linear-gradient(to bottom, black 20%, transparent);
+    }
   }
   
-  .outer-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .nav-hide{
     transform: translateY(-100%);
   }
   

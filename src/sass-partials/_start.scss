@@ -6,15 +6,7 @@
     justify-content: center;
     flex-basis: 100%;
     height: calc(var(--vh, 1vh) * 100);
-    nav{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      .wrapper{
-        width: 90%;
-      }
-    }
+   
     .wrapper {
       width: 70%;
       margin: 0 auto;

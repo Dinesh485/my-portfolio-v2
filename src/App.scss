@@ -9,6 +9,8 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  cursor: none;
+
 }
 
 $sm: 640px;
@@ -36,6 +38,42 @@ $bg-color: rgb(16, 13, 27);
     z-index: 100;
     img{
         width: 100px;
+    }
+}
+
+.cursor{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2000;
+    user-select: none;
+    pointer-events: none;
+    display: none;
+    @media (min-width: $lg){
+        display: block;
+    }
+}
+
+.follower{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1999;
+    opacity: .8;
+    user-select: none;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    display: none;
+    @media (min-width: $lg){
+        display: block;
     }
 }
 

@@ -12,23 +12,25 @@
   
     
     .wrapper{
-      width: 80%;
-     display: grid;
-     grid-gap: 20px;
+      width: 70%;
+     
+     
      
      color: whitesmoke;
       margin: 0 auto;
-      align-items: center;  
-      justify-items: center;
-      
+     
        .project{
+         
          color: whitesmoke;
          position: relative;
-        max-width: 300px;
+         width: 100%;
+         max-width: 300px;
+         margin: 30px 0;
+         display: block;
          img{
            width: 100%;
           
-           display:block;
+           
            z-index: 1;
          }
         .name{
@@ -50,7 +52,7 @@
           .index{
             font-size: 1rem;
             font-weight: lighter;
-            color: rgba(128, 128, 128, 0.767);
+            color: rgba(117, 62, 62, 0.767);
             display: block;
             
           }
@@ -68,11 +70,7 @@
          left: 0;
          
        }
-       .project:nth-child(even){
-         justify-self: end;
-       }
-       .project:nth-child(odd){
-        justify-self: start;
-      }
+       
+     
     }
   }

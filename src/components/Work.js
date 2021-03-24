@@ -24,6 +24,26 @@ const Work = () => {
             image: projectImage,
             url : 'https://www.wix.com'
         },
+        {
+            name: 'project 1',
+            image: projectImage,
+            url : 'https://www.wix.com'
+        },
+        {
+            name: 'project 1',
+            image: projectImage,
+            url : 'https://www.wix.com'
+        },
+        {
+            name: 'project 1',
+            image: projectImage,
+            url : 'https://www.wix.com'
+        },
+        {
+            name: 'project 1',
+            image: projectImage,
+            url : 'https://www.wix.com'
+        },
     ]
 
     return ( 

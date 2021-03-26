@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import Scrollspy from 'react-scrollspy'
 
 
 const Nav = ({position}) => {
@@ -18,12 +19,12 @@ const Nav = ({position}) => {
           <Link to ="/" className="logo">
             <span>{'<'}</span><span>DG</span><span>{'/>'}</span>
           </Link>
-        <ul className="nav-links">
-           <li><Link to = '#start'>start</Link></li>
-           <li><Link to = '#work'>work</Link></li>
-           <li><Link to = '#about'>about</Link></li>
-           <li><Link to = '#contact'>contact</Link></li>
-        </ul>
+        <Scrollspy items = {['start', 'work', 'about', 'contact']} currentClassName = "active-nav-link" className="nav-links">
+           <li><a href = '#start' >start</a></li>
+           <li><a href = '#work'>work</a></li>
+           <li><a href = '#about'>about</a></li>
+           <li><a href = '#contact'>contact</a></li>
+        </Scrollspy>
         <div className="menu-btn" onClick  = {handleClick}>
             <div></div>
             <div></div>

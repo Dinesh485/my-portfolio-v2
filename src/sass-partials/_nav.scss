@@ -67,7 +67,10 @@ nav {
           padding: 5px;
           text-transform: capitalize;
         }
-        .active {
+
+      }
+      .active-nav-link{
+        a{
           color: whitesmoke;
         }
       }

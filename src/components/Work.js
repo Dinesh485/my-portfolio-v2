@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+
 import projectImage from '../images/projectImages/Screenshot.png'
+import Tilty from 'react-tilty'
 
 const Work = () => {
     
@@ -52,8 +53,8 @@ const Work = () => {
                 {
                     projects.map((item, index) =>{
                         return (
-                           
-                                <Link to = {item.url} className = "project" key= {index}>
+                           <Tilty glare = {true} maxGlare = {0.5}>
+                            <a href = "http://www.facebook.com" className = "project" key= {index} target= "_blanck">
                                <img src={item.image} alt=""/>
                                <div className="name">
                                    <span>
@@ -61,7 +62,9 @@ const Work = () => {
                                    </span>
                                    <span className ="index">{index +1}</span>
                                </div>
-                            </Link>
+                            </a>
+                           </Tilty>
+                            
                            
                         )
                     })

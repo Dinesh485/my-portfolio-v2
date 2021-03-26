@@ -9,6 +9,7 @@ nav {
     background: none;
     height: auto;
     transition: transform 400ms linear;
+    background: linear-gradient(to bottom, black 20%, transparent);
     .wrapper {
       width: 90%;
       margin: 0 auto;
@@ -43,24 +44,29 @@ nav {
   
     .nav-links {
       position: absolute;
-      bottom: 0;
+      top: 0;
       width: 100%;
       left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+     
       font-size: 1.5rem;
+      z-index: -1;
   
-      transform: translateY(100%);
-      box-sizing: border-box;
-  
+    
+     
       overflow: hidden;
       max-height: 0;
       transition: max-height 200ms linear;
-      background: $bg-color;
+      background: linear-gradient(to bottom , $bg-color 80%, transparent);
+      .nav-links-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px  0 80px;
+      }
+  
       li {
         width: fit-content;
-        margin: 5px 0;
+        margin: 10px 0;
         a {
           color: rgb(151, 151, 151);
           font-weight: bold;
@@ -80,7 +86,10 @@ nav {
         max-height: fit-content;
         transform: translateY(0);
         z-index: 1;
-        flex-direction: row;
+        .nav-links-wrapper{
+          flex-direction: row;
+          padding: 0;
+        }
         width: fit-content;
         font-size: 1.4rem;
         li {
@@ -91,10 +100,12 @@ nav {
         background: none;
       }
     }
+   @media(max-width: $sm){
     .active-nav {
-      max-height: 250px;
+      max-height: 500px;
     }
   
+   }
     .menu-btn {
       width: 40px;
       height: 35px;
@@ -118,12 +129,17 @@ nav {
       }
     }
 
-    @media(min-width: $md){
-      background: linear-gradient(to bottom, black 20%, transparent);
-    }
+    
   }
   
+ @media (min-width: $sm){
   .nav-hide{
     transform: translateY(-100%);
   }
-  
+
+ }
+ @media(max-width: $sm){
+  .active-nav-open{
+    background: $bg-color !important;
+  }
+ }

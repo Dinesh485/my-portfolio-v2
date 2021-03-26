@@ -18,15 +18,22 @@
      
      color: whitesmoke;
       margin: 0 auto;
+      >div{
+        width: fit-content;
+        transform-style: preserve-3d;
+        
+      }
      
        .project{
          
          color: whitesmoke;
          position: relative;
          width: 100%;
-         max-width: 300px;
+         max-width: 400px;
          margin: 30px 0;
          display: block;
+         
+        
          img{
            width: 100%;
           
@@ -41,6 +48,7 @@
           font-weight: bold;
           text-transform: capitalize;
           z-index: 2;
+          transform: translateZ(40px);
           span:first-child{
             border-bottom: 3px solid whitesmoke;
             padding: 5px 0;

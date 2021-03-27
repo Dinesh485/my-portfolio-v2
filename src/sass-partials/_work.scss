@@ -21,7 +21,9 @@
       >div{
         width: fit-content;
         transform-style: preserve-3d;
-        
+         >.glare-wrapper{
+           pointer-events: none;
+         }
       }
      
        .project{
@@ -60,7 +62,7 @@
           .index{
             font-size: 1rem;
             font-weight: lighter;
-            color: rgba(117, 62, 62, 0.767);
+            color: rgba(128, 128, 128, 0.692);
             display: block;
             
           }

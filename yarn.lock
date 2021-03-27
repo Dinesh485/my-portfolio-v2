@@ -9299,6 +9299,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-parallax-tilt@^1.4.95:
+  version "1.4.95"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.4.95.tgz#b5fe6215e4f48aa06c8790559311cc520362176f"
+  integrity sha512-LlzhqiP1UhSnGoPmh5WXj8us0QCzhxRvdOzDE29pJ8oFIuJ6Ogk7ibJNgO0iZzIugRDESAel1gxJUzIFR5y05Q==
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
@@ -9407,11 +9412,6 @@ react-scrollspy@^3.4.3:
     babel-runtime "^6.26.0"
     classnames "^2.2.5"
     prop-types "^15.5.10"
-
-react-tilty@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-tilty/-/react-tilty-2.0.2.tgz#b09b0a4acbed407eaf9c1f113c13d36b8acca3a5"
-  integrity sha512-6O3q8+GdoPjayLPreJ0U4DFPhneoBcMtUCyZTit0BgRME6e77kxM1v4zFv23RTV4XrKzrmulaL6CUZlIJLHSsg==
 
 react@^17.0.1:
   version "17.0.1"

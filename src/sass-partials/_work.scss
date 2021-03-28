@@ -21,6 +21,7 @@
       >div{
         width: fit-content;
         transform-style: preserve-3d;
+      
          >.glare-wrapper{
            pointer-events: none;
          }
@@ -34,14 +35,32 @@
          max-width: 400px;
          margin: 30px 0;
          display: block;
-         
+         z-index: -1;
         
-         img{
-           width: 100%;
-          
-           
-           z-index: 1;
-         }
+       .image-wrapper{
+         overflow: hidden;
+        
+        >div{
+        
+          img{
+            width: 100%;
+            z-index: 1;
+            display: block;
+            position: relative;
+          }
+        }
+        >div:after{
+          content: '';
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(to top right, rgb(0, 0, 0) , rgba(128, 128, 128, 0));
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+       }
+       
         .name{
           position: absolute;
           left: -20px;
@@ -56,7 +75,7 @@
             padding: 5px 0;
             
             display: block;
-            width: fit-content;
+            width: 140px;
             margin-bottom: 10px ;
           }
           .index{
@@ -70,17 +89,7 @@
        
   
        }
-       .project:after{
-         content: '';
-         height: 100%;
-         width: 100%;
-         background: linear-gradient(to top right, rgb(0, 0, 0) , rgba(128, 128, 128, 0));
-         position: absolute;
-         top: 0;
-         left: 0;
-         
-       }
-       
+      
      
     }
   }

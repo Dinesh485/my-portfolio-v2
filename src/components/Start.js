@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import {gsap } from 'gsap'
-import bgImg from '../images/58064.png'
 
+import bgImg from '../images/58064.png'
+import {gsap} from 'gsap'
 
 const Start = () => {
     
@@ -9,8 +9,8 @@ const Start = () => {
         
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
-        gsap.from('.anim1', {y: -50, opacity: 0,duration: 1, stagger: .2})
         
+        gsap.from('.anim1', {opacity:0,y:-50, duration: 1 ,stagger: 0.2})
         
         
     

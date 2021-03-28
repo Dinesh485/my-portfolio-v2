@@ -8,7 +8,7 @@ nav {
     z-index: 100;
     background: none;
     height: auto;
-    transition: transform 400ms linear;
+    transition: transform 400ms ease;
     background: linear-gradient(to bottom, black 20%, transparent);
     .wrapper {
       width: 90%;

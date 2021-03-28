@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import "./App.scss";
 import Nav from "./components/Nav";
@@ -10,51 +10,41 @@ import { gsap } from "gsap";
 function App() {
   let [isloading, setLaoding] = useState(true);
 
+  let cursorRef = useRef(null);
+  let followerRef = useRef(null);
   useEffect(() => {
-
-
     //custom cursor
-    
-    gsap.set(".follower", { xPercent: -50, yPercent: -50 });
-    gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
-
+    gsap.to(cursorRef.current, { xPercent: -50, yPercent: -50 });
+    gsap.to(followerRef.current, { xPercent: -50, yPercent: -50 });
     window.addEventListener("mousemove", (e) => {
-      gsap.to(".cursor", 0.1, { x: e.clientX, y: e.clientY });
-      gsap.to(".follower", 0.4, { x: e.clientX, y: e.clientY });
+      gsap.to(cursorRef.current, 0.1, { x: e.clientX, y: e.clientY });
+      gsap.to(followerRef.current, 0.4, { x: e.clientX, y: e.clientY });
     });
 
-    let anchor= document.querySelectorAll('a')
-    for(let i = 0; i<anchor.length; i++){
-      anchor[i].addEventListener('mouseenter', () =>{
-         gsap.to('.follower', {scale: 2 , duration: 0.3})
-      
-      })
-      anchor[i].addEventListener('mouseleave' , () =>{
-        gsap.to('.follower', {scale: 1,duration: 0.3 })
-      })
+    let anchor = document.querySelectorAll("a");
+    for (let i = 0; i < anchor.length; i++) {
+      anchor[i].addEventListener("mouseenter", () => {
+        gsap.to(followerRef.current, { scale: 2, duration: 0.4 });
+        console.log("working");
+      });
+      anchor[i].addEventListener("mouseleave", () => {
+        gsap.to(followerRef.current, {scale: 1, duration: 0.4})
+      });
     }
 
+    //scroll detection
+    let nav = document.querySelector("nav");
 
-  //scroll detection
-  let nav = document.querySelector('nav')
-  
     let lastScrolltop = 0;
     window.addEventListener("scroll", (e) => {
       let st = window.pageYOffset;
       if (st > lastScrolltop) {
-        
-        nav.classList.add('nav-hide')
-        
-
-       
-
+        nav.classList.add("nav-hide");
       } else {
-        
-        nav.classList.remove('nav-hide')
+        nav.classList.remove("nav-hide");
       }
       lastScrolltop = st <= 0 ? 0 : st;
     });
-
 
     //remove loading screen
     setLaoding(false);
@@ -72,8 +62,8 @@ function App() {
             <img src={loading} alt="" />
           </span>
         )}
-        <div className="cursor" id="cursor"></div>
-        <div className="follower" id="follower"></div>
+        <div ref={cursorRef} className="cursor" id="cursor"></div>
+        <div ref={followerRef} className="follower" id="follower"></div>
       </div>
     </BrowserRouter>
   );

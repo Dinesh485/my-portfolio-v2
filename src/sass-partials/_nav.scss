@@ -69,6 +69,7 @@ nav {
         margin: 10px 0;
         a {
           color: rgb(151, 151, 151);
+          transition: color 300ms linear;
           font-weight: bold;
           padding: 5px;
           text-transform: capitalize;

@@ -1,0 +1,119 @@
+.contact{
+    height: 50vh;
+    min-height: fit-content;
+    background: $bg-color;
+    position: relative;
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        max-width: $xl;
+        margin:  0 auto;
+        >div{
+            width: fit-content;
+            >p{
+                color: gray;
+                font-size: 1.05rem;
+                margin-bottom: 10px;
+            }
+        }
+
+        h2,h3{
+            color: whitesmoke;
+            
+            margin-bottom: 10px;
+        }
+        h2{
+         
+            font-size: 2rem;
+            font-weight: lighter;
+        }
+        h3{
+            font-weight: lighter;
+            opacity: 0.8;
+        }
+        
+         .links{
+             width: fit-content;
+             display: flex;
+             margin-top: 20px;
+             a{
+                margin-right: 20px;
+                 opacity: 0.9;
+                 img{
+                     width: 30px;
+                     pointer-events: none;
+                 }
+             }
+
+         }
+         @media(min-width: $md){
+             h2{
+                 font-size: 2.5rem;
+             }
+         }
+         @media(min-width:$lg){
+             >div{
+                 >p{
+                     font-size: 1.2rem;
+                 }
+             }
+             h2{
+                 font-size: 3rem;
+              
+                 
+
+             }
+             h3{
+                 opacity: 1;
+                
+             }
+             .links{
+                  margin-top: 40px;
+                 a{
+                     margin-right: 30px;
+                     img{
+                         width: 40px;
+                     }
+                 }
+             }
+         }
+         @media(min-width: $xl){
+             h2{
+                 font-size: 4rem;
+             }
+             h3{
+                 font-size: 1.5rem;
+             }
+             .links{
+                 a{
+                    margin-right: 40px;
+                 }
+             }
+         }
+    }
+    .bg-title{
+        position:absolute;
+        font-size: 8rem;
+        font-weight: bold;
+        top: 0;
+        left: 0;
+        color: whitesmoke;
+        opacity: 0.05;
+       
+    }
+    @media(min-width: $md){
+        .bg-title{
+            font-size: 10rem;
+        }
+    }
+    @media(min-width: $xl){
+        
+        .bg-title{
+            left: 20px;
+            top: 20px;
+            font-size: 20rem;
+        }
+    }
+}

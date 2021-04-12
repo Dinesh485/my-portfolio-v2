@@ -6,6 +6,8 @@ import Start from "./components/Start";
 import Work from "./components/Work";
 import loading from "./images/loading.svg";
 import { gsap } from "gsap";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   let [isloading, setLaoding] = useState(true);
@@ -25,7 +27,7 @@ function App() {
     for (let i = 0; i < anchor.length; i++) {
       anchor[i].addEventListener("mouseenter", () => {
         gsap.to(followerRef.current, { scale: 2, duration: 0.4 });
-        console.log("working");
+     
       });
       anchor[i].addEventListener("mouseleave", () => {
         gsap.to(followerRef.current, {scale: 1, duration: 0.4})
@@ -56,7 +58,8 @@ function App() {
         <Nav />
         <Start />
         <Work />
-
+        <About />
+        <Contact />
         {isloading && (
           <span className="loading">
             <img src={loading} alt="" />

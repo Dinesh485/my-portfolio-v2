@@ -8,32 +8,96 @@
     width: 100%;
   
     padding: 100px 0;
+    position: relative;
+
+    .title{
+      width: 70%;
+      margin: 0 auto 30px;
+      
     
-  
+      
+      span:first-child{
+        color: rgba(255, 255, 255, 0.418);
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        font-weight: lighter;
+        display: block;
+      }
+      span:last-child{
+        display: block;
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 1.3rem;
+        opacity: 0.7;
+        
+      }
+     
+      @media(min-width: $lg){
+       span:first-child{
+         font-size: 1.2rem;
+         
+       }
+       span:last-child{
+        font-size: 1.5rem;
+      }
+     }
+     @media(min-width: $xl){
+      width: 60%;
+      span:last-child{
+       font-size: 1.8rem;
+     }
+    }
+    }
+    
+   .bg-title{
+     position: absolute;
+     top: 0;
+
+     color: rgb(104, 100, 131);
+     opacity: 0.1;
+     font-size: 9rem;
+      width: 100%;
+     margin: 0 auto;
+     font-weight: bold;
+     text-align: center;
+     overflow: hidden;
+     z-index: -2;
+     @media(min-width: $sm){
+       font-size: 20rem;
+     }
+
+   }
     
     .wrapper{
-      width: 70%;
-     
-     
-     
-     color: whitesmoke;
+      width: 80%;
+      color: whitesmoke;
       margin: 0 auto;
+      display: grid;
+      
+
       >div{
         width: fit-content;
+        height: fit-content;
         transform-style: preserve-3d;
+        margin: 20px;
       
          >.glare-wrapper{
            pointer-events: none;
          }
       }
-     
+      >div:nth-child(odd){
+        align-self: center;
+        justify-self: end;
+      }
+      >div:nth-child(even){
+        align-self: end;
+        justify-self:start;
+      }
        .project{
          
          color: whitesmoke;
          position: relative;
-         width: 100%;
-         max-width: 400px;
-         margin: 30px 0;
+         width: fit-content;
          display: block;
          z-index: -1;
         
@@ -41,9 +105,13 @@
          overflow: hidden;
         
         >div{
-        
+         
+          
           img{
             width: 100%;
+            max-width: 350px;
+            max-height: 600px;
+            
             z-index: 1;
             display: block;
             position: relative;
@@ -53,7 +121,7 @@
           content: '';
           height: 100%;
           width: 100%;
-          background: linear-gradient(to top right, rgb(0, 0, 0) , rgba(128, 128, 128, 0));
+          background: linear-gradient(70deg, rgb(0, 0, 0) , rgba(128, 128, 128, 0));
           position: absolute;
           top: 0;
           left: 0;
@@ -65,18 +133,29 @@
           position: absolute;
           left: -20px;
           bottom: 30px;
-          font-size: 1.3rem;
-          font-weight: bold;
+          
+          font-weight: 400;
           text-transform: capitalize;
           z-index: 2;
           transform: translateZ(40px);
           span:first-child{
-            border-bottom: 3px solid whitesmoke;
+            border-bottom: 2px solid whitesmoke;
             padding: 5px 0;
-            
             display: block;
-            width: 140px;
             margin-bottom: 10px ;
+            @media(min-width: $sm){
+              width: 100px;
+
+            }
+            @media(min-width: $md){
+              
+            }
+            @media(min-width: $lg){
+              width: 140px;
+              font-size: 1.3rem;
+              font-weight: bold;
+              border-width: 3px;
+            }
           }
           .index{
             font-size: 1rem;
@@ -90,6 +169,22 @@
   
        }
       
-     
+       @media(min-width: $sm){
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: masonry;
+       }
+       @media(min-width: $lg){
+         grid-template-columns: repeat(3, 1fr);
+         gap: 30px;
+        
+       }
+      
+       @media(min-width: $xxl){
+         width: 70%;
+       }
     }
+    @media(min-width: $lg){
+      padding: 150px 0;
+   
+  }
   }

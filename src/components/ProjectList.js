@@ -1,43 +1,51 @@
-import projectImage from '../images/projectImages/Screenshot.png'
+import image1 from '../images/projectImages/project-1.jpg'
+import image2 from '../images/projectImages/project-2.jpg'
+import image3 from '../images/projectImages/project-3.jpg'
+import image4 from '../images/projectImages/project-4.jpg'
+import image5 from '../images/projectImages/project-5.jpg'
+import image6 from '../images/projectImages/project-6.jpg'
+import image7 from '../images/projectImages/project-7.jpg'
+import image8 from '../images/projectImages/project-8.jpg'
 const projects =  [
     {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image: image3,
         url : ''
     },
     {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image: image4,
         url : ''
     },
     {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image:image1  ,
         url : ''
     },
     {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image: image2,
+        url : ''
+    },
+    
+    {
+        name: '',
+        image: image5,
         url : ''
     },
     {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image: image6,
         url : ''
     },
     {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image: image7,
         url : ''
     },
     {
-        name: 'project 1',
-        image: projectImage,
-        url : ''
-    },
-    {
-        name: 'project 1',
-        image: projectImage,
+        name: '',
+        image: image8,
         url : ''
     },
 ]

@@ -1,0 +1,130 @@
+.about{
+    background: $bg-color2;
+    position: relative;
+    .wrapper{
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        max-width: $xl;
+        padding: 70px 0;
+        .title{
+            color: gray;
+            
+            margin-bottom: 20px;
+           font-size: 1.05rem;
+        }
+    }
+    .grid-container{
+     display: grid;
+    
+     
+     gap: 40px;
+    
+      .my-profile-pic{
+          position: relative;
+           
+           width: 60%;
+           margin: 0 auto;
+           max-width: 400px;
+           height: fit-content;
+        
+        img{
+            width: 100%;
+           
+        }
+      }
+      .my-profile-pic::after{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 2;
+          background: linear-gradient(70deg, rgba(0, 0, 0, 0.884) , rgba(128, 128, 128, 0));
+      }
+      .about-me{
+          line-height: 1.5;
+          color: rgb(235, 235, 235);
+          h3{
+              font-size: 1.5rem;
+              margin-bottom: 10px;
+          }
+           
+          p{
+              opacity: 0.8;
+          }
+      }
+      
+      @media (min-width: $sm){
+          grid-template-columns: 1fr 1fr;
+          
+          .my-profile-pic{
+              width: 100%;
+          }
+          .about-me{
+              h3{
+                  font-size:2rem;
+              }
+              p{
+                  font-size: 1.2rem;
+              }
+          }
+      }
+      @media (min-width: $xl){
+         
+          .about-me{
+              h3{
+                  font-size: 2.5rem;
+                  margin-bottom: 20px;
+              }
+              p{
+                  font-size: 1.5rem;
+              }
+          }
+      }
+      
+    }
+   .bg-title{
+       position:absolute;
+       font-size: 8rem;
+       font-weight: bold;
+       top: 0;
+       right: 0;
+       color: whitesmoke;
+       opacity: 0.05;
+      
+   }
+
+
+   @media(min-width:$sm){
+      .wrapper{
+        padding: 100px 0;
+      }
+   }
+   @media(min-width: $md){
+       .bg-title{
+           font-size: 10rem;
+       }
+   }
+   
+   @media(min-width: $xl){
+       .wrapper{
+           padding: 150px 0;
+       }
+       .bg-title{
+           right: 20px;
+           top: 20px;
+           font-size: 20rem;
+       }
+   }
+   @media(min-width: $lg){
+       .wrapper{
+         .title{
+             font-size: 1.2rem;
+         }
+       }
+       
+   }
+}

@@ -6,7 +6,7 @@
     justify-content: center;
     flex-basis: 100%;
     height: calc(var(--vh, 1vh) * 100);
-   
+    background: $bg-color;
     .wrapper {
       width: 70%;
       margin: 0 auto;
@@ -25,7 +25,35 @@
         width: fit-content;
         overflow: hidden;
         span {
-          color: $accent-color;
+         
+
+           svg{
+             width: 150px;
+             margin-top: 10px;
+             path{
+               stroke-width: 3;
+               animation: strokeOffset 2s linear;
+               animation-fill-mode: forwards;
+               stroke: whitesmoke;
+               
+               
+             }
+            
+           }
+            @keyframes strokeOffset{
+              0%{
+                 
+              }
+              80%{
+                fill: transparent;
+              }
+              100%{
+                stroke-dashoffset: 0;
+                fill: whitesmoke;
+                
+              }
+            }
+         
         }
       }
       h2 {
@@ -54,6 +82,11 @@
       @media (min-width: $sm) {
         h1 {
           font-size: 2.5rem;
+          span{
+            svg{
+              width: 180px;
+            }
+          }
         }
         h2 {
           font-size: 2.2rem;
@@ -67,6 +100,11 @@
         width: 60%;
         h1 {
           font-size: 3rem;
+          span{
+            svg{
+              width: 220px;
+            }
+          }
         }
         h2 {
           font-size: 2.8rem;
@@ -76,7 +114,7 @@
         }
       }
     }
-    svg {
+    .scrollIcon {
       position: absolute;
       bottom: 30px;
       margin: 0 auto;

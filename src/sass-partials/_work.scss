@@ -143,6 +143,9 @@
             padding: 5px 0;
             display: block;
             margin-bottom: 10px ;
+            position: relative;
+           
+            
             @media(min-width: $sm){
               width: 100px;
 
@@ -157,6 +160,7 @@
               border-width: 3px;
             }
           }
+         
           .index{
             font-size: 1rem;
             font-weight: lighter;
@@ -165,7 +169,7 @@
             
           }
         }
-       
+        
   
        }
       

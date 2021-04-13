@@ -35,15 +35,15 @@ const Start = () => {
         <section className = "start" id = 'start' >
             <div className="starfield" ref = {starField}>
                 
-                     {starfieldstars.map(ele => {
-                         return (<div style = {{top : `${Math.random()*100}%`,left : `${Math.random()*100}%`}}></div>)
+                     {starfieldstars.map((ele, index) => {
+                         return (<div key = {index} style = {{top : `${Math.random()*100}%`,left : `${Math.random()*100}%`}}></div>)
                      })}
                 
             </div>
            
              <div className="shootingstar-container">
-             {shootingstars.map(ele => {
-                         return (<div className = "star" style = {{top : `${Math.random()*100}%`,left : `${Math.random()*100}%`}}></div>)
+             {shootingstars.map((ele, index) => {
+                         return (<div key = {index} className = "star" style = {{top : `${Math.random()*100}%`,left : `${Math.random()*100}%`}}></div>)
                      })}
                  
              </div>

@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import {gsap} from 'gsap'
 import NameSVG from '../images/NameSVG'
+
 const Start = () => {
-    
+    let starField = useRef(null)
+
     useEffect(() =>{
         
         let vh = window.innerHeight * 0.01;
@@ -10,14 +12,41 @@ const Start = () => {
         
         gsap.from('.anim1', {opacity:0,y:-50, duration: 1 ,stagger: 0.2})
         
-        
-    
-    },[])
+       
 
+
+        
+    },[])
+    
+    let starfieldstars = [];
+    for(let i =0 ; i<= 200; i++){
+        starfieldstars.push('')
+    }
+    
+    let shootingstars = [];
+    for(let i =0 ; i<= 20; i++){
+        shootingstars.push('')
+    }
+    
+  
+    
 
     return ( 
         <section className = "start" id = 'start' >
-             
+            <div className="starfield" ref = {starField}>
+                
+                     {starfieldstars.map(ele => {
+                         return (<div style = {{top : `${Math.random()*100}%`,left : `${Math.random()*100}%`}}></div>)
+                     })}
+                
+            </div>
+           
+             <div className="shootingstar-container">
+             {shootingstars.map(ele => {
+                         return (<div className = "star" style = {{top : `${Math.random()*100}%`,left : `${Math.random()*100}%`}}></div>)
+                     })}
+                 
+             </div>
             <div className="wrapper">
                 <p className = "anim1 ">Start {"/>"}</p>
                 <h1 className = "anim1">Hi, my name is <span><NameSVG /></span></h1>

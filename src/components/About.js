@@ -35,9 +35,9 @@ const About = () => {
                 <img src={profileImg} alt=""/>
                 </div>
                 <div className="about-me">
-                    <h3 className = "anim2">Lorem ipsum dolor sit amet.</h3>
-                    <p className = "anim2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vero in ex magni, doloribus dolor et sed nisi illum. Consequuntur a amet ipsum quisquam sapiente aliquam quas atque reprehenderit dolor.</p>
-                    <p className = "anim2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vero in ex magni, doloribus dolor et sed nisi illum. Consequuntur a amet ipsum quisquam sapiente aliquam quas atque reprehenderit dolor.</p>
+                    <h3 className = "anim2">Hi there, I'm Dinesh,<br/> Nice to meet you.</h3>
+                    <p className = "anim2">I specialize in front end development and currently pursuing a degree in computer science. Learning web development on my own is both fun and challenging. It's been two years since i started learning and worked hard to get to this point.</p>
+                    <p className = "anim2">I'm constantly improving myself to be a better developer than i am today. I like playing video games and watch anime in my free time.</p>
                    
 
                 </div>

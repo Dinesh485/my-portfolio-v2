@@ -55,9 +55,91 @@
           p{
               opacity: 0.8;
           }
+          .skills{
+              margin-top: 30px;
+              display: grid;
+              gap: 20px;
+              @media(min-width: $xl){
+                  grid-template-columns: 1fr 1fr;
+                  gap: 40px;
+
+              }
+              .front-end-skills{
+                 
+                  h4{
+                      color: whitesmoke;
+                      margin-bottom: 20px;
+                      font-size: 1.5rem;
+                      font-weight: lighter;
+                  }
+                  >div{
+                      display: flex;
+                      align-items: center;
+                      color: black;
+                      margin-bottom: 15px;
+                      max-width: 300px;
+
+                      img{
+                          width: 30px;
+                          margin-right: 15px;
+
+                      }
+                      .bar{
+                          flex-grow: 1;
+                          height: 100%;
+                          position: relative;
+                          box-sizing: border-box;
+                          padding: 5px 10px;
+                          overflow:hidden;
+                          border: 1px solid whitesmoke
+                      }
+                      .bar-after{
+                          content: '';
+                          position: absolute;
+                          width: 100%;
+                          height: 100%;
+                          background: whitesmoke;
+                          left: 0;
+                          top: 0;
+                         
+                          z-index: -1;
+  
+                      }
+                  }
+                  @media(min-width: $xl){
+                      h4{
+                          font-size: 2rem;
+                      }
+                  }
+              }
+              .back-end-skills{
+                h4{
+                    color: whitesmoke;
+                    margin-bottom: 20px;
+                    font-size: 1.5rem;
+                    font-weight: lighter;
+                }
+                >div{
+                   display: flex;
+                   flex-wrap: wrap;
+                   align-items: flex-end;
+                    img{
+                        width: 100px;
+                        margin-right: 20px;
+                    }
+                }
+                @media(min-width: $xl){
+                    h4{
+                        font-size: 2rem;
+                    }
+              }
+             
+            }
+          }
+
       }
       
-      @media (min-width: $sm){
+      @media (min-width: $md){
           grid-template-columns: 1fr 1fr;
           
           .my-profile-pic{

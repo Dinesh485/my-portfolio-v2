@@ -30,10 +30,10 @@ const Nav = ({position}) => {
             <span>{'<'}</span><span>DG</span><span>{'/>'}</span>
           </Link>
        <div className="nav-links">
-       <Scrollspy items = {['start', 'work', 'about', 'contact']} currentClassName = "active-nav-link" offset = {-200} className="nav-links-wrapper">
+       <Scrollspy items = {['start', 'about', 'work', 'contact']} currentClassName = "active-nav-link" offset = {-200} className="nav-links-wrapper">
            <li><a href = '#start' >start</a></li>
-           <li><a href = '#work'>work</a></li>
            <li><a href = '#about'>about</a></li>
+           <li><a href = '#work'>work</a></li>
            <li><a href = '#contact'>contact</a></li>
         </Scrollspy>  
        </div>

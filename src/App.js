@@ -57,8 +57,8 @@ function App() {
       <div className="App">
         <Nav />
         <Start />
-        <Work />
         <About />
+        <Work />
         <Contact />
         {isloading && (
           <span className="loading">

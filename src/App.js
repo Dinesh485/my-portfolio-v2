@@ -17,8 +17,6 @@ function App() {
   let cursorRef = useRef(null);
   let followerRef = useRef(null);
   useEffect(() => {
-    //Change title
-    document.title = "Dinesh's portfolio"
     //custom cursor
     gsap.to(cursorRef.current, { xPercent: -50, yPercent: -50 });
     gsap.to(followerRef.current, { xPercent: -50, yPercent: -50 });

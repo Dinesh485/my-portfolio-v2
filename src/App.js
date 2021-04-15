@@ -10,11 +10,15 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 
 function App() {
+
+
   let [isloading, setLaoding] = useState(true);
 
   let cursorRef = useRef(null);
   let followerRef = useRef(null);
   useEffect(() => {
+    //Change title
+    document.title = "Dinesh's portfolio"
     //custom cursor
     gsap.to(cursorRef.current, { xPercent: -50, yPercent: -50 });
     gsap.to(followerRef.current, { xPercent: -50, yPercent: -50 });

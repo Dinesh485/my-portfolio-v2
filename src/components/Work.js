@@ -10,29 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Work = () => {
 
 
-   useEffect(()=>{
-
-     //card slide right when scrolled
-      let projects = document.querySelectorAll('.work .project')
-
-      for(let i = 0; i<projects.length; i++){
-
-         let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger : `.project-${i}`,
-                start: 'top 80%',    
-            }
-         })
-         tl.from(`.project-${i} .image-wrapper >div`, {
-            x: -200,
-            opacity: 0,
-            duration: 0.5
-         })
-
-      }
    
-    
-   }, [])
     return ( 
         <section className="work" id="work">
             <div className="title">
